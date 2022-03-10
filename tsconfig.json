@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+   "target" :"ES5",
+   "module":"CommonJS"  ,
+   "strict":true,
+   "esModuleInterop": true,
+   "forceConsistentCasingInFileNames": true                             
+ }
+}
+
+/*sempre que fazemos um código em typescript precisamos transcrevê-lo para o javascript pq o browser não compila o typescript ele compila o javascript*/
