@@ -20,7 +20,7 @@ interface Veiculo { //criando uma interface no typescript
             localStorage.setItem("patio", JSON.stringify(veiculos))
         }
 
-        function add(veiculo: Veiculo) { 
+        function add(veiculo: Veiculo, salva? : boolean) { 
             const row = document.createElement("tr")
 
             row.innerHTML = `
@@ -34,7 +34,7 @@ interface Veiculo { //criando uma interface no typescript
 
             $("#patio")?.appendChild(row)
 
-            save([...ler(), veiculo])
+            if(salva) save([...ler(), veiculo])
             // ... significa 'todos os antigos'
         }
         function remove() { }
