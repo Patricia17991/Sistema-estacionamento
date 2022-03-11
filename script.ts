@@ -42,7 +42,12 @@ interface Veiculo { //criando uma interface no typescript
             // ... significa 'todos os antigos'
         }
         function remove(placa: string) { 
-            const {entrada, nome} = ler().find(veiculo => veiculo.placa === placa)
+            const { entrada, nome } = ler().find(veiculo => veiculo.placa === placa)
+            
+            //cálculo de tempo que o veiculo ficou estacionado
+            const time = new Date().getTime() - entrada.getTime()
+
+
         }
         
         function render() {
