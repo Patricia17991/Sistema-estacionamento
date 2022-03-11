@@ -1,3 +1,11 @@
+interface Veiculo { //criando uma interface no typescript
+    nome: string
+    placa: string
+    entrada: Date
+
+}
+
+
 //vamos de inicioa executar uma função anônima
 (function () {
     const $ = (query: string): HTMLInputElement | null => document.querySelector(query)
@@ -5,14 +13,14 @@
     //crud
     function patio() {
         function ler() { }
-        function add() { }
+        function add(veiculo: Veiculo) { }
         function remove() { }
         function save(){}
         function render() { }
-        
-        return {ler, add, remove, save, render}
             
-        }
+        return {ler, add, remove, save, render}
+        
+    }
 
 
     $("#cadastrar")?.addEventListener("click", () => {
@@ -25,6 +33,8 @@
             alert("Os campos 'Nome' e 'Placa' são obrigatórios")
             return
         }
+
+        patio().add({nome, placa, entrada: new Date})
     })
 })()
 
