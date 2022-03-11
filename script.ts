@@ -3,8 +3,7 @@ interface Veiculo { //criando uma interface no typescript
     placa: string
     entrada: Date | string
 
-}
-
+}//uma interface pode ser concatenada a outra interface
 
 //vamos de inicioa executar uma função anônima
 (function () {
@@ -98,3 +97,4 @@ interface Veiculo { //criando uma interface no typescript
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
 // o '?' deixa um parâmetro totalmente opcional
+
