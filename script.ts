@@ -54,7 +54,7 @@ interface Veiculo { //criando uma interface no typescript
             //cálculo de tempo que o veiculo ficou estacionado
             const time = calculoTime(new Date().getTime() - new Date(entrada).getTime())
 
-            if (confirm('O veículo ${nome} permaneceu por ${time}. Deseja encerrar? ')) return
+            if (confirm(`O veículo ${nome} permaneceu por ${time}. Deseja encerrar?`)) return
 
             save(ler().filter(veiculo => veiculo.placa !== placa))
 
@@ -98,4 +98,3 @@ interface Veiculo { //criando uma interface no typescript
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
 // o '?' deixa um parâmetro totalmente opcional
-
