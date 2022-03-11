@@ -14,7 +14,11 @@ interface Veiculo { //criando uma interface no typescript
     function patio() {
         function ler() {
             return localStorage.patio ? JSON.parse(localStorage.patio) : []
-         }//responsável pelo armazenamento no local storage
+        }//responsável pelo armazenamento no local storage
+        
+        function save(veiculos: Veiculo[]) { 
+            localStorage.setItem("patio", JSON.stringify(veiculos))
+        }
 
         function add(veiculo: Veiculo) { 
             const row = document.createElement("tr")
@@ -31,8 +35,6 @@ interface Veiculo { //criando uma interface no typescript
             $("#patio")?.appendChild(row)
         }
         function remove() { }
-
-        function save() { }
         
         function render() { }
             
