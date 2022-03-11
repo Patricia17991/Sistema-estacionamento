@@ -12,7 +12,9 @@ interface Veiculo { //criando uma interface no typescript
 
     //crud
     function patio() {
-        function ler() { }
+        function ler() {
+            return localStorage.patio ? JSON.parse(localStorage.patio) : []
+         }//responsável pelo armazenamento no local storage
 
         function add(veiculo: Veiculo) { 
             const row = document.createElement("tr")
