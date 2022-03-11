@@ -40,7 +40,7 @@ interface Veiculo { //criando uma interface no typescript
         function remove() { }
         
         function render() {
-            $("#patio")?.innerHTML = "" 
+            $("#patio").innerHTML = "" 
             const patio = ler()
 
             if (patio.lenght) {
