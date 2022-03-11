@@ -42,7 +42,7 @@ interface Veiculo { //criando uma interface no typescript
             // ... significa 'todos os antigos'
         }
         function remove(placa: string) { 
-            const {entrada, nome} = ler().find(veiculo => veiculo.placa)
+            const {entrada, nome} = ler().find(veiculo => veiculo.placa === placa)
         }
         
         function render() {
