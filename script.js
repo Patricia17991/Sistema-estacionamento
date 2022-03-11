@@ -20,12 +20,13 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
         function save(veiculos) {
             localStorage.setItem("patio", JSON.stringify(veiculos));
         }
-        function add(veiculo) {
+        function add(veiculo, salva) {
             var _a;
             var row = document.createElement("tr");
             row.innerHTML = "\n            <td>".concat(veiculo.nome, "</td>\n            <td>").concat(veiculo.placa, "</td>\n            <td>").concat(veiculo.entrada, "</td>\n            <td>\n                <button class=\"delete\" data-placa=\"").concat(veiculo.placa, "\">X</button>\n            </td>\n            ");
             (_a = $("#patio")) === null || _a === void 0 ? void 0 : _a.appendChild(row);
-            save(__spreadArray(__spreadArray([], ler(), true), [veiculo], false));
+            if (salva)
+                save(__spreadArray(__spreadArray([], ler(), true), [veiculo], false));
             // ... significa 'todos os antigos'
         }
         function remove() { }
@@ -55,4 +56,5 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 //essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
+// o '?' deixa um parâmetro totalmente opcional
 
