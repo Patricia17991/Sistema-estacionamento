@@ -9,6 +9,8 @@
         function remove() { }
         function save(){}
         function render() { }
+        
+        return {ler, add, remove, save, render}
             
         }
 
