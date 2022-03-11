@@ -1,4 +1,3 @@
-
 //vamos de inicioa executar uma função anônima
 (function () {
     var _a;
@@ -71,3 +70,4 @@
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
 // o '?' deixa um parâmetro totalmente opcional
+
