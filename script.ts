@@ -44,7 +44,7 @@ interface Veiculo { //criando uma interface no typescript
             const patio = ler()
 
             if (patio.lenght) {
-                patio.forEach(veiculo => add())
+                patio.forEach((veiculo) => add(veiculo))
             }
          }
             
