@@ -58,6 +58,8 @@ interface Veiculo { //criando uma interface no typescript
 
             save(ler().filter(veiculo => veiculo.placa !== placa))
 
+            render()
+
 
         }
         
