@@ -5,7 +5,12 @@
     var $ = function (query) { return document.querySelector(query); };
     //crud
     function patio() {
-        function ler() { }
+        function ler() {
+            return localStorage.patio ? JSON.parse(localStorage.patio) : [];
+        } //responsável pelo armazenamento no local storage
+        function save(veiculos) {
+            localStorage.setItem("patio", JSON.stringify(veiculos));
+        }
         function add(veiculo) {
             var _a;
             var row = document.createElement("tr");
@@ -13,7 +18,6 @@
             (_a = $("#patio")) === null || _a === void 0 ? void 0 : _a.appendChild(row);
         }
         function remove() { }
-        function save() { }
         function render() { }
         return { ler: ler, add: add, remove: remove, save: save, render: render };
     }
