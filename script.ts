@@ -32,12 +32,18 @@ interface Veiculo { //criando uma interface no typescript
             </td>
             `
 
+            row.querySelector(".delete")?.addEventListener("click", function (){
+                remove(this.dataset.placa)
+            })
+
             $("#patio")?.appendChild(row)
 
             if(salva) save([...ler(), veiculo])
             // ... significa 'todos os antigos'
         }
-        function remove() { }
+        function remove(placa: string) { 
+            const {entrada, nome} = ler().find(veiculo => veiculo.placa)
+        }
         
         function render() {
             $("#patio")!.innerHTML = "" // ! serve para forçar que o innerHTML seja lido desse jeito. só use quando tiver certeza que o objeto existe! cuidado ao usar o force
