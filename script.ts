@@ -17,3 +17,6 @@
 })()
 
 //essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
+
+//sempre que fizer alterações, transpile o código:
+//npx -p typescript tsc
