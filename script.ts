@@ -5,3 +5,6 @@
 
     $("#cadastrar")?.addEventListener//pegando o id cadastrar
 })()
+
+
+//essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
