@@ -1,4 +1,13 @@
 "use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 //vamos de inicioa executar uma função anônima
 (function () {
     var _a;
@@ -16,6 +25,8 @@
             var row = document.createElement("tr");
             row.innerHTML = "\n            <td>".concat(veiculo.nome, "</td>\n            <td>").concat(veiculo.placa, "</td>\n            <td>").concat(veiculo.entrada, "</td>\n            <td>\n                <button class=\"delete\" data-placa=\"").concat(veiculo.placa, "\">X</button>\n            </td>\n            ");
             (_a = $("#patio")) === null || _a === void 0 ? void 0 : _a.appendChild(row);
+            save(__spreadArray(__spreadArray([], ler(), true), [veiculo], false));
+            // ... significa 'todos os antigos'
         }
         function remove() { }
         function render() { }
