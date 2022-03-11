@@ -12,7 +12,7 @@ interface Veiculo { //criando uma interface no typescript
 
     //crud
     function patio() {
-        function ler() : Veiculo[] {
+        function ler(): Veiculo[] {
             return localStorage.patio ? JSON.parse(localStorage.patio) : []
         }//responsável pelo armazenamento no local storage
         
@@ -52,6 +52,7 @@ interface Veiculo { //criando uma interface no typescript
         
     }
 
+    patio().render()//chamando o render
 
     $("#cadastrar")?.addEventListener("click", () => {
         //quando clicar em cadastrar vou capturar os inputs
