@@ -39,7 +39,7 @@
             const { entrada, nome } = ler().find(veiculo => veiculo.placa === placa);
             //cálculo de tempo que o veiculo ficou estacionado
             const time = calculoTime(new Date().getTime() - new Date(entrada).getTime());
-            if (confirm('O veículo ${nome} permaneceu por ${time}. Deseja encerrar? '))
+            if (confirm(`O veículo ${nome} permaneceu por ${time}. Deseja encerrar?`))
                 return;
             save(ler().filter(veiculo => veiculo.placa !== placa));
             render();
