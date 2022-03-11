@@ -2,6 +2,7 @@
 (function () {
     const $ = (query: string): HTMLInputElement | null => document.querySelector(query)
 
+    //crud
     function patio() {
         function ler() { }
         function add() { }
