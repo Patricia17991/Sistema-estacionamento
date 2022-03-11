@@ -29,7 +29,13 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
             // ... significa 'todos os antigos'
         }
         function remove() { }
-        function render() { }
+        function render() {
+            $("#patio").innerHTML = ""; // ! serve para forçar que o innerHTML seja lido desse jeito. só use quando tiver certeza que o objeto existe! cuidado ao usar o force
+            var patio = ler();
+            if (patio.length) {
+                patio.forEach(function (veiculo) { return add(veiculo); });
+            }
+        }
         return { ler: ler, add: add, remove: remove, save: save, render: render };
     }
     (_a = $("#cadastrar")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
