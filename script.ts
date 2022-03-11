@@ -2,6 +2,15 @@
 (function () {
     const $ = (query: string): HTMLInputElement | null => document.querySelector(query)
 
+    function patio() {
+        function ler() { }
+        function add() { }
+        function remove() { }
+        function save(){}
+        function render() { }
+            
+        }
+
 
     $("#cadastrar")?.addEventListener("click", () => {
         //quando clicar em cadastrar vou capturar os inputs
