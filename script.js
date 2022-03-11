@@ -38,6 +38,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
         }
         return { ler: ler, add: add, remove: remove, save: save, render: render };
     }
+    patio().render(); //chamando o render
     (_a = $("#cadastrar")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
         var _a, _b;
         //quando clicar em cadastrar vou capturar os inputs
@@ -54,3 +55,4 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 //essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
+
