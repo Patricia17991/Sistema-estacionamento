@@ -52,7 +52,11 @@ interface Veiculo { //criando uma interface no typescript
             const { entrada, nome } = ler().find(veiculo => veiculo.placa === placa)
             
             //cálculo de tempo que o veiculo ficou estacionado
-            const time = new Date().getTime() - entrada.getTime()
+            const time = calculoTime(new Date().getTime() - entrada.getTime())
+
+            if (confirm('O veículo ${nome} permaneceu por ${time}. Deseja encerrar? ')) return
+
+            save(ler().filter(veiculo => veiculo.placa !== placa))
 
 
         }
