@@ -1,3 +1,4 @@
+
 //vamos de inicioa executar uma função anônima
 (function () {
     var _a;
@@ -37,7 +38,7 @@
         function remove(placa) {
             const { entrada, nome } = ler().find(veiculo => veiculo.placa === placa);
             //cálculo de tempo que o veiculo ficou estacionado
-            const time = calculoTime(new Date().getTime() - entrada.getTime());
+            const time = calculoTime(new Date().getTime() - new Date(entrada).getTime());
             if (confirm('O veículo ${nome} permaneceu por ${time}. Deseja encerrar? '))
                 return;
             save(ler().filter(veiculo => veiculo.placa !== placa));
@@ -63,12 +64,10 @@
             alert("Os campos 'Nome' e 'Placa' são obrigatórios");
             return;
         }
-        patio().add({ nome, placa, entrada: new Date() }, true);
+        patio().add({ nome, placa, entrada: new Date().toISOString() }, true);
     });
 })();
 //essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
 // o '?' deixa um parâmetro totalmente opcional
-
-
