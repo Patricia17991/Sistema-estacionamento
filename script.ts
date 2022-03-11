@@ -8,6 +8,10 @@
         const nome = $("#nome")?.value
         const placa = $("#placa")?.value
 
+        //verificar se p usuário enviou as informações desejadas
+        if (nome || placa) {
+            alert("Os campos 'Nome' e 'Placa' são obrigatórios")
+        }
     })
 })()
 
