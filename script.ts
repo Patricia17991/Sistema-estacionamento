@@ -3,5 +3,5 @@
     const $ = (query: string) => document.querySelector(query);
 
 
-    $("#cadastrar")?.addEventListener()//pegando o id cadastrar
+    $("#cadastrar")?.addEventListener//pegando o id cadastrar
 })()
