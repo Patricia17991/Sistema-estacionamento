@@ -73,3 +73,4 @@ interface Veiculo { //criando uma interface no typescript
 
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
+// o '?' deixa um parâmetro totalmente opcional
