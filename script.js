@@ -7,8 +7,10 @@
     function patio() {
         function ler() { }
         function add(veiculo) {
+            var _a;
             var row = document.createElement("tr");
             row.innerHTML = "\n            <td>".concat(veiculo.nome, "</td>\n            <td>").concat(veiculo.placa, "</td>\n            <td>").concat(veiculo.entrada, "</td>\n            <td>\n                <button class=\"delete\" data-placa=\"").concat(veiculo.placa, "\">X</button>\n            </td>\n            ");
+            (_a = $("#patio")) === null || _a === void 0 ? void 0 : _a.appendChild(row);
         }
         function remove() { }
         function save() { }
