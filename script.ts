@@ -65,7 +65,7 @@ interface Veiculo { //criando uma interface no typescript
             return
         }
 
-        patio().add({nome, placa, entrada: new Date()})
+        patio().add({nome, placa, entrada: new Date()}, true)
     })
 })()
 
