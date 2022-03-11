@@ -13,9 +13,23 @@ interface Veiculo { //criando uma interface no typescript
     //crud
     function patio() {
         function ler() { }
-        function add(veiculo: Veiculo) { }
+
+        function add(veiculo: Veiculo) { 
+            const row = document.createElement("tr")
+
+            row.innerHTML = `
+            <td>${veiculo.nome}</td>
+            <td>${veiculo.placa}</td>
+            <td>${veiculo.entrada}</td>
+            <td>
+                <button class="delete" data-placa="${veiculo.placa}">X</button>
+            </td>
+            `
+        }
         function remove() { }
-        function save(){}
+
+        function save() { }
+        
         function render() { }
             
         return {ler, add, remove, save, render}
