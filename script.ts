@@ -33,6 +33,9 @@ interface Veiculo { //criando uma interface no typescript
             `
 
             $("#patio")?.appendChild(row)
+
+            save([...ler(), veiculo])
+            // ... significa 'todos os antigos'
         }
         function remove() { }
         
