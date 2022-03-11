@@ -10,6 +10,13 @@ interface Veiculo { //criando uma interface no typescript
 (function () {
     const $ = (query: string): HTMLInputElement | null => document.querySelector(query)
 
+    function calculoTime(mil: number) {
+        const min = Math.floor(mil / 60000)
+        const sec = Math.floor((mil % 60000 / 1000))
+
+        return `${min}min e ${sec}sec`
+      }
+
     //crud
     function patio() {
         function ler(): Veiculo[] {
