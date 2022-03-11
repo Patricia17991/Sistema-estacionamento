@@ -25,6 +25,8 @@ interface Veiculo { //criando uma interface no typescript
                 <button class="delete" data-placa="${veiculo.placa}">X</button>
             </td>
             `
+
+            $("#patio")?.appendChild(row)
         }
         function remove() { }
 
