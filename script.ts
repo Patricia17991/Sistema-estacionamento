@@ -1,7 +1,7 @@
 interface Veiculo { //criando uma interface no typescript
     nome: string
     placa: string
-    entrada: Date
+    entrada: Date | string
 
 }
 
@@ -52,7 +52,7 @@ interface Veiculo { //criando uma interface no typescript
             const { entrada, nome } = ler().find(veiculo => veiculo.placa === placa)
             
             //cálculo de tempo que o veiculo ficou estacionado
-            const time = calculoTime(new Date().getTime() - entrada.getTime())
+            const time = calculoTime(new Date().getTime() - new Date(entrada).getTime())
 
             if (confirm('O veículo ${nome} permaneceu por ${time}. Deseja encerrar? ')) return
 
@@ -89,7 +89,7 @@ interface Veiculo { //criando uma interface no typescript
             return
         }
 
-        patio().add({nome, placa, entrada: new Date()}, true)
+        patio().add({nome, placa, entrada: new Date().toISOString()}, true)
     })
 })()
 
@@ -98,3 +98,4 @@ interface Veiculo { //criando uma interface no typescript
 //sempre que fizer alterações, transpile o código:
 //npx -p typescript tsc
 // o '?' deixa um parâmetro totalmente opcional
+
