@@ -7,7 +7,6 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
         }
     }
     return to.concat(ar || Array.prototype.slice.call(from));
-    
 };
 //vamos de inicioa executar uma função anônima
 (function () {
@@ -51,11 +50,8 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
             alert("Os campos 'Nome' e 'Placa' são obrigatórios");
             return;
         }
-        patio().add({ nome: nome, placa: placa, entrada: new Date() });
+        patio().add({ nome: nome, placa: placa, entrada: new Date() }, true);
     });
 })();
-//essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
-//sempre que fizer alterações, transpile o código:
-//npx -p typescript tsc
-// o '?' deixa um parâmetro totalmente opcional
+
 
