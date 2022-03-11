@@ -1,0 +1,33 @@
+* {
+     background-color: #c9a2c8;
+    background-position: -10rem;
+    padding:0;
+    
+}
+
+td, th {
+    padding: .7em;
+    margin: 0;
+    text-align: center;
+
+  }
+  
+  
+  td {
+    font-weight:bold;
+
+  }
+  
+  table {
+    width: 100%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    text-align: center;
+
+  }
+
+  h2 {
+    text-align: center;
+
+  }
+
