@@ -39,7 +39,14 @@ interface Veiculo { //criando uma interface no typescript
         }
         function remove() { }
         
-        function render() { }
+        function render() {
+            $("#patio")?.innerHTML = "" 
+            const patio = ler()
+
+            if (patio.lenght) {
+                
+            }
+         }
             
         return {ler, add, remove, save, render}
         
