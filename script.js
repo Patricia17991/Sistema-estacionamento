@@ -1,4 +1,3 @@
-
 (function () {
     var _a;
     const $ = (query) => document.querySelector(query);
@@ -12,9 +11,11 @@
         function ler() {
             return localStorage.patio ? JSON.parse(localStorage.patio) : [];
         }
+        
         function save(veiculos) {
             localStorage.setItem("patio", JSON.stringify(veiculos));
         }
+        
         function add(veiculo, salva) {
             var _a, _b;
             const row = document.createElement("tr");
@@ -34,6 +35,7 @@
                 save([...ler(), veiculo]);
            
         }
+        
         function remove(placa) {
             const { entrada, nome } = ler().find(veiculo => veiculo.placa === placa);
            
@@ -43,6 +45,7 @@
             save(ler().filter(veiculo => veiculo.placa !== placa));
             render();
         }
+        
         function render() {
             $("#patio").innerHTML = ""; 
             const patio = ler();
@@ -50,7 +53,9 @@
                 patio.forEach((veiculo) => add(veiculo));
             }
         }
+        
         return { ler, add, remove, save, render };
+        
     }
     patio().render(); 
     (_a = $("#cadastrar")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
@@ -63,6 +68,7 @@
             alert("Os campos 'Nome' e 'Placa' são obrigatórios");
             return;
         }
+        
         patio().add({ nome, placa, entrada: new Date().toISOString() }, true);
     });
 })();
