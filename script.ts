@@ -5,7 +5,6 @@ interface Veiculo { //criando uma interface no typescript
 
 }//uma interface pode ser concatenada a outra interface
 
-//vamos de inicioa executar uma função anônima
 (function () {
     const $ = (query: string): HTMLInputElement | null => document.querySelector(query)
 
@@ -16,7 +15,7 @@ interface Veiculo { //criando uma interface no typescript
         return `${min}min e ${sec}sec`
       }
 
-    //crud
+   
     function patio() {
         function ler(): Veiculo[] {
             return localStorage.patio ? JSON.parse(localStorage.patio) : []
@@ -78,11 +77,11 @@ interface Veiculo { //criando uma interface no typescript
     patio().render()//chamando o render
 
     $("#cadastrar")?.addEventListener("click", () => {
-        //quando clicar em cadastrar vou capturar os inputs
+        //quando clicar, capturar os inputs
         const nome = $("#nome")?.value
         const placa = $("#placa")?.value
 
-        //verificar se p usuário enviou as informações desejadas
+        //verificar se o usuário enviou as informações desejadas
         if (!nome || !placa) {
             alert("Os campos 'Nome' e 'Placa' são obrigatórios")
             return
@@ -92,9 +91,8 @@ interface Veiculo { //criando uma interface no typescript
     })
 })()
 
-//essa ? noeventlistener o vscode colocou pq o elemento pode vir nulo
+// ? no eventlistener o vscode colocou pq o elemento pode vir nulo
 
-//sempre que fizer alterações, transpile o código:
-//npx -p typescript tsc
+//sempre que fizer alterações, transpile o código: npx -p typescript tsc
 // o '?' deixa um parâmetro totalmente opcional
 
